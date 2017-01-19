@@ -13,8 +13,7 @@ public class Main {
     private static int[] CreateArray(int length, int max_n){
         int[] array = new int[length];
         for (int n = 0; n < length; n++){
-            int number = (int)(Math.random()*(max_n+1));
-            array[n] = number;
+            array[n] = (int)(Math.random()*(max_n+1));
         }
         return array;
     }
@@ -41,10 +40,9 @@ public class Main {
         if (array.length % columns != 0){
             for (int n = 0; n < array.length % columns; n++){
                 System.out.printf("%02d ", array[rows*columns+n]);
-                System.out.println();
             }
         }
-        System.out.println();
+        System.out.println("\n");
     }
 
     /**
@@ -114,7 +112,7 @@ public class Main {
 
     public static void main(String[] args) {
 	// Create array
-	int[] RandIntArray = CreateArray(100, 99);
+	int[] RandIntArray = CreateArray(103, 99);
 
 	// Print array pre sorting
 	System.out.println("Before sorting:");
